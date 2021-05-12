@@ -18,9 +18,9 @@ class MovieDetailsNetworkDataSource(
     val networkState: LiveData<NetworkState>
         get() = _networkState
 
-    private val _downlaodedMovieDetailsResponse = MutableLiveData<MovieDetailsData>()
+    private val _downloadedMovieDetailsResponse = MutableLiveData<MovieDetailsData>()
     val downloadedMovieResponse: LiveData<MovieDetailsData>
-        get() = downloadedMovieResponse
+        get() = _downloadedMovieDetailsResponse
 
     fun fetchMovieDetails(movieId: Int) {
         _networkState.postValue(NetworkState.LOADING)
@@ -31,7 +31,7 @@ class MovieDetailsNetworkDataSource(
                     .subscribeOn(Schedulers.io())
                     .subscribe(
                         {
-                            _downlaodedMovieDetailsResponse.postValue(it)
+                            _downloadedMovieDetailsResponse.postValue(it)
                             _networkState.postValue(NetworkState.LOADED)
                         },
                         {
