@@ -6,4 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".MovieDetails">
 
+    <ProgressBar
+        android:id="@+id/movie_details_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="150dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/movie_details_image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/movie_details_title" />
+
+    <TextView
+        android:id="@+id/movie_details_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="25sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/movie_details_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text = "HANSEL AND FRIENDS"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

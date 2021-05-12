@@ -14,7 +14,6 @@ data class MovieDetailsData(
     val posterPath: String,
     @SerializedName("release_date")
     val releaseDate: String,
-    val revenue: Int,
     val status: String,
     val tagline: String,
     val title: String,
