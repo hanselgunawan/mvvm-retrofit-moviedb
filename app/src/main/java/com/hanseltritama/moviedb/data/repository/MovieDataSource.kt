@@ -14,7 +14,7 @@ class MovieDataSource(
     private val compositeDisposable: CompositeDisposable) : PageKeyedDataSource<Int, Movie>() {
 
     private var page = FIRST_PAGE
-    private val networkState: MutableLiveData<NetworkState> = MutableLiveData()
+    val networkState: MutableLiveData<NetworkState> = MutableLiveData()
 
     override fun loadInitial(
         params: LoadInitialParams<Int>,
