@@ -27,7 +27,7 @@ class MovieDataSource(
                 .subscribeOn(Schedulers.io())
                 .subscribe(
                     {
-                        callback.onResult(it.movieList, null, page+1)
+                        callback.onResult(it.movieList, null, page + 1)
                         networkState.postValue(NetworkState.LOADED)
                     },
                     {

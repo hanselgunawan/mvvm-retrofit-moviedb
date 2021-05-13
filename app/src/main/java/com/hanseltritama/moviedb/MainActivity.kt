@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         movieRepository = MoviePagedListRepository(apiService)
 
-        getViewModel()
+        viewModel = getViewModel()
 
         val movieAdapter = PopularMoviePagedListAdapter(this)
 
